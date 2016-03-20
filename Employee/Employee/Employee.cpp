@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int Employee::numberOfEmployees = 0;
+int Employee::numEmployees = 0;
 
 Employee::Employee()
 {
@@ -13,7 +13,7 @@ Employee::Employee()
 
 Employee::~Employee()
 {
-	numberOfEmployees--; // Number of emloyees decrease when any one is destroyed
+	numEmployees--; // Number of emloyees decrease when any one is destroyed
 }
 
 
