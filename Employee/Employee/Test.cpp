@@ -9,11 +9,11 @@ int main()
 	float totSal;
 
 	SalaryEmployee *salaryEmp = new SalaryEmployee("Anderson", 360306);
-	HourlyEmployee *houryEmp = new HourlyEmployee("Michael", 211015);
+	HourlyEmployee *hourlyEmp = new HourlyEmployee("Michael", 211015);
 	CommissionEmployee *commissionEmp = new CommissionEmployee("Joachim", 130714);
 
 	cout <<"Salary employee: "<< salaryEmp->name()<<" "<< salaryEmp->staffNumber() << endl;
-	cout << "Hourly employee: " << houryEmp->name() << " " << houryEmp->staffNumber() << endl;
+	cout << "Hourly employee: " << hourlyEmp->name() << " " << hourlyEmp->staffNumber() << endl;
 	cout <<"Commission employee: " << commissionEmp->name() << " " << commissionEmp->staffNumber() << endl;
 
 	cout << "Total number of employees: " << Employee::numEmployees << endl;  
@@ -23,8 +23,8 @@ int main()
 
 	salaryEmp->setSalary(50000);
 
-	houryEmp->setHourlyRate(1000);
-	houryEmp->setHoursWorked(30);
+	hourlyEmp->setHourlyRate(1000);
+	hourlyEmp->setHoursWorked(30);
 
 	commissionEmp->setBaseSalary(10000);
 	commissionEmp->setRate(0.80);
@@ -32,13 +32,13 @@ int main()
 
 	//Fill out array with object of derived class
 	ptrEmp[0] = salaryEmp;
-	ptrEmp[1] = houryEmp;
+	ptrEmp[1] = hourlyEmp;
 	ptrEmp[2] = commissionEmp;
 
 	//Display salary
 	cout << endl;
 	cout << salaryEmp->name() << "'s monthly salary is " << ptrEmp[0]->salary() << endl;
-	cout << houryEmp->name() << "'s monthly salary is " << ptrEmp[1]->salary() << endl;
+	cout << hourlyEmp->name() << "'s monthly salary is " << ptrEmp[1]->salary() << endl;
 	cout << commissionEmp->name() << "'s monthly salary is " << ptrEmp[2]->salary() << endl;
 	cout << endl;
 

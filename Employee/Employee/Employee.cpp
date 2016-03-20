@@ -25,16 +25,16 @@ SalaryEmployee::SalaryEmployee(){
 	sal = 0.00;
 }
 
-SalaryEmployee::SalaryEmployee(string iempName, int inumber)
+SalaryEmployee::SalaryEmployee(string empNameIn, int numberIn)
 {
-	empName = iempName;
+	empName = empNameIn;
 
-	if (inumber >= 0){
-		employeeNumber = inumber;
+	if (numberIn >= 0){
+		employeeNumber = numberIn;
 	}
 	else
 	{
-		cout << "Invalid Staff Number input. Ensure a positive number now" << endl;
+		cout << "Invalid staff number. Please try again: " << endl;
 		cin >> employeeNumber;
 	}
 
@@ -71,12 +71,12 @@ HourlyEmployee::HourlyEmployee(){
 	sal = 0.00;
 }
 
-HourlyEmployee::HourlyEmployee(string iname, int inumber)
+HourlyEmployee::HourlyEmployee(string empNameIn, int numberIn)
 {
-	empName = iname;
+	empName = empNameIn;
 
-	if (inumber >= 0){
-		employeeNumber = inumber;
+	if (numberIn >= 0){
+		employeeNumber = numberIn;
 	}
 	else
 	{
