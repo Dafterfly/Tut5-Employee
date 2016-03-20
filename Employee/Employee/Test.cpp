@@ -44,14 +44,14 @@ int main()
 
 	//Get the total monthly salary to be paid
 
-	totalSalary = 0;
+	totSal = 0;
 
 	int i;
 	for (i = 0; i<3; i++)
 	{
-		ptrEmp[i]->salary()
+		ptrEmp[i]->salary();
 	}
-	cout << "Total Salary for All Employees is: " << totalSalary << endl;
+	cout << "Total Salary for All Employees is: " << totSal << endl;
 
 	//testing destroying employees
 
