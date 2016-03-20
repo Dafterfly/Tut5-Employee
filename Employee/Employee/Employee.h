@@ -53,3 +53,26 @@ public: HourlyEmployee();
 		int staffNumber();
 };
 
+// derive CommissionEmployee class
+class CommissionEmployee : public Employee{
+private: float baseSalary;
+		 float commRate;
+		 float revGenerated;
+
+public: CommissionEmployee();
+		CommissionEmployee(string, int);
+		~CommissionEmployee();
+
+		
+		float setBaseSalary(float);  
+		float setRate(float);        
+		float setRevenue(float);       
+
+		//override defaults
+		float salary();      
+		string name();
+		int staffNumber();
+};
+
+
+

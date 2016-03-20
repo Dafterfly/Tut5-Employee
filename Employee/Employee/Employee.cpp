@@ -16,7 +16,7 @@ Employee::~Employee()
 	numEmployees--; // Number of emloyees decrease when any one is destroyed
 }
 
-
+// SalaryEmployee functions:
 SalaryEmployee::SalaryEmployee(){
 
 	empName = "Monthly";
@@ -63,7 +63,7 @@ int SalaryEmployee::staffNumber(){
 	return employeeNumber;
 }
 
-
+//HourlyEmployee functions
 HourlyEmployee::HourlyEmployee(){
 	empName = "Hourly";
 	employeeNumber = 0;
@@ -80,7 +80,7 @@ HourlyEmployee::HourlyEmployee(string iname, int inumber)
 	}
 	else
 	{
-		cout << "Invalid staff number. Please try again: " << endl;
+		cout << "Invalid staff number. Please try again: ";
 		cin >> employeeNumber;
 	}
 
@@ -117,6 +117,71 @@ string HourlyEmployee::name()
 }
 
 int HourlyEmployee::staffNumber()
+{
+	return employeeNumber;
+}
+
+
+// CommissionEmployee functions:
+CommissionEmployee::CommissionEmployee()
+{
+	empName = "Commission";
+	employeeNumber = 0;
+	numEmployees++;
+	sal = 0.00;
+}
+
+CommissionEmployee::CommissionEmployee(string NameIn, int numberIn)
+{
+	empName = NameIn;
+
+	if (numberIn >= 0){
+		employeeNumber = numberIn;
+	}
+	else
+	{
+		cout << "Invalid staff number. Please try again: ";
+		cin >> employeeNumber;
+	}
+
+	numEmployees++;
+	sal = 0.00;
+}
+
+CommissionEmployee::~CommissionEmployee(){
+	numEmployees--;
+}
+
+float CommissionEmployee::setBaseSalary(float baseIn)
+{
+	baseSalary = baseIn;
+	return baseSalary;
+}
+
+float CommissionEmployee::setRate(float irate)
+{
+	commRate = irate; //NB Send a decimal percentage value
+	return commRate;
+}
+
+float CommissionEmployee::setRevenue(float revIn)
+{
+	revGenerated = revIn;
+	return revGenerated;
+}
+
+float CommissionEmployee::salary()
+{
+	sal = baseSalary + commRate*revGenerated;
+	return sal;
+}
+
+string CommissionEmployee::name()
+{
+	return empName;
+}
+
+int CommissionEmployee::staffNumber()
 {
 	return employeeNumber;
 }
