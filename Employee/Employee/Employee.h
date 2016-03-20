@@ -12,10 +12,10 @@ public:
 	Employee();
 	~Employee();
 
-	//Pure Virtual Functions for Abstract Class
+	//pure virtual functions
 	virtual string name() = 0;
-	virtual int staffNumber() = 0;  //Returns staff number of employee --POSITIVE INTEGER
-	virtual float salary() = 0;    //Returns amount of money PAID AT MONTH END
+	virtual int staffNumber() = 0;  
+	virtual float salary() = 0;    
 };
 
 class SalaryEmployee : public Employee{
