@@ -8,7 +8,7 @@ class Employee
 protected:
 	string empName = "";  
 	float sal;   
-	string employeeNumber = "";  
+	int employeeNumber;  
 
 public:
 	static int numEmployees;  
@@ -17,7 +17,7 @@ public:
 
 	//pure virtual functions
 	virtual string name() = 0;
-	virtual string staffNumber() = 0;  
+	virtual int staffNumber() = 0;  
 	virtual float salary() = 0;    
 };
 
@@ -34,7 +34,7 @@ public:
 	//overide defaults
 	float salary();    
 	string name();
-	string staffNumber();
+	int staffNumber();
 };
 
 // derive HouryEmployee class
@@ -53,7 +53,7 @@ public: HourlyEmployee();
 		//override defaults
 		float salary();       
 		string name();
-		string staffNumber();
+		int staffNumber();
 };
 
 // derive CommissionEmployee class
@@ -74,7 +74,7 @@ public: CommissionEmployee();
 		//override defaults
 		float salary();      
 		string name();
-		string staffNumber();
+		int staffNumber();
 };
 
 
