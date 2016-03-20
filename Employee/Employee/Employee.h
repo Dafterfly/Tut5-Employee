@@ -1,11 +1,14 @@
 #pragma once
+#include <string>
+
+using namespace std;
+
 class Employee
 {
-protected:
-
-	string empName;  
+private:
+	string empName = "";  
 	float sal;   
-	int employeeNumber;  
+	string employeeNumber = "";  
 
 public:
 	static int numEmployees;  
