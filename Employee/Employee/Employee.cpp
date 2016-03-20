@@ -62,3 +62,61 @@ string SalaryEmployee::name(){
 int SalaryEmployee::staffNumber(){
 	return employeeNumber;
 }
+
+
+HourlyEmployee::HourlyEmployee(){
+	empName = "Hourly";
+	employeeNumber = 0;
+	numEmployees++;
+	sal = 0.00;
+}
+
+HourlyEmployee::HourlyEmployee(string iname, int inumber)
+{
+	empName = iname;
+
+	if (inumber >= 0){
+		employeeNumber = inumber;
+	}
+	else
+	{
+		cout << "Invalid staff number. Please try again: " << endl;
+		cin >> employeeNumber;
+	}
+
+	numEmployees++;
+	sal = 0.00;
+}
+
+HourlyEmployee::~HourlyEmployee()
+{
+	numEmployees--;
+}
+
+float HourlyEmployee::setHourlyRate(float ihourlySalary)
+{
+	hourlySalary = ihourlySalary;
+	return hourlySalary;
+}
+
+int HourlyEmployee::setHoursWorked(int ihours)
+{
+	hoursWorked = ihours;
+	return hoursWorked;
+}
+
+float HourlyEmployee::salary()
+{
+	sal = hourlySalary*hoursWorked;
+	return sal;
+}
+
+string HourlyEmployee::name()
+{
+	return empName;
+}
+
+int HourlyEmployee::staffNumber()
+{
+	return employeeNumber;
+}
