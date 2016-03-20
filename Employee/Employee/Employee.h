@@ -3,8 +3,8 @@ class Employee
 {
 protected:
 
-	string name;  
-	float salary;   
+	string empName;  
+	float sal;   
 	int employeeNumber;  
 
 public:
@@ -18,3 +18,17 @@ public:
 	virtual float salary() = 0;    //Returns amount of money PAID AT MONTH END
 };
 
+class SalaryEmployee : public Employee{
+private: float monthlySalary;
+public:
+	SalaryEmployee();
+	SalaryEmployee(string, int);
+	~SalaryEmployee();
+
+	float setSalary(const float);  
+
+	//overide defaults
+	float salary();    
+	string name();
+	int staffNumber();
+};
