@@ -5,7 +5,7 @@ using namespace std;
 
 class Employee
 {
-private:
+protected:
 	string empName = "";  
 	float sal;   
 	string employeeNumber = "";  
@@ -17,7 +17,7 @@ public:
 
 	//pure virtual functions
 	virtual string name() = 0;
-	virtual int staffNumber() = 0;  
+	virtual string staffNumber() = 0;  
 	virtual float salary() = 0;    
 };
 
@@ -34,7 +34,7 @@ public:
 	//overide defaults
 	float salary();    
 	string name();
-	int staffNumber();
+	string staffNumber();
 };
 
 // derive HouryEmployee class
@@ -53,7 +53,7 @@ public: HourlyEmployee();
 		//override defaults
 		float salary();       
 		string name();
-		int staffNumber();
+		string staffNumber();
 };
 
 // derive CommissionEmployee class
@@ -74,7 +74,7 @@ public: CommissionEmployee();
 		//override defaults
 		float salary();      
 		string name();
-		int staffNumber();
+		string staffNumber();
 };
 
 

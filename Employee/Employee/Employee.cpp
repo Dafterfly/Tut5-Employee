@@ -20,7 +20,7 @@ Employee::~Employee()
 SalaryEmployee::SalaryEmployee(){
 
 	empName = "Monthly";
-	employeeNumber = 0;
+	employeeNumber = "0";
 	numEmployees++;
 	sal = 0.00;
 }
@@ -59,14 +59,14 @@ string SalaryEmployee::name(){
 	return empName;
 }
 
-int SalaryEmployee::staffNumber(){
+string SalaryEmployee::staffNumber(){
 	return employeeNumber;
 }
 
 //HourlyEmployee functions
 HourlyEmployee::HourlyEmployee(){
 	empName = "Hourly";
-	employeeNumber = 0;
+	employeeNumber = "0";
 	numEmployees++;
 	sal = 0.00;
 }
@@ -116,7 +116,7 @@ string HourlyEmployee::name()
 	return empName;
 }
 
-int HourlyEmployee::staffNumber()
+string HourlyEmployee::staffNumber()
 {
 	return employeeNumber;
 }
@@ -126,7 +126,7 @@ int HourlyEmployee::staffNumber()
 CommissionEmployee::CommissionEmployee()
 {
 	empName = "Commission";
-	employeeNumber = 0;
+	employeeNumber = "0";
 	numEmployees++;
 	sal = 0.00;
 }
@@ -181,7 +181,7 @@ string CommissionEmployee::name()
 	return empName;
 }
 
-int CommissionEmployee::staffNumber()
+string CommissionEmployee::staffNumber()
 {
 	return employeeNumber;
 }

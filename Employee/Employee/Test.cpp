@@ -12,11 +12,11 @@ int main()
 	HourlyEmployee *houryEmp = new HourlyEmployee("Michael", 211015);
 	CommissionEmployee *commissionEmp = new CommissionEmployee("Joachim", 130714);
 
-	cout <<"Salary employye: "<< salaryEmp->name()<<" "<< salaryEmp->staffNumber() << endl;
-	cout << "Hourly employye: " << houryEmp->name() << " " << houryEmp->staffNumber() << endl;
-	cout <<"Commission employye: " << commissionEmp->name() << " " << commissionEmp->staffNumber() << endl;
+	cout <<"Salary employee: "<< salaryEmp->name()<<" "<< salaryEmp->staffNumber() << endl;
+	cout << "Hourly employee: " << houryEmp->name() << " " << houryEmp->staffNumber() << endl;
+	cout <<"Commission employee: " << commissionEmp->name() << " " << commissionEmp->staffNumber() << endl;
 
-	cout << "Total number of Employees: " << Employee::numEmployees << endl;  
+	cout << "Total number of employees: " << Employee::numEmployees << endl;  
 
 
 	Employee *ptrEmp[3];  // Can't create it the usual way because of the abstract pure virt function
@@ -49,17 +49,15 @@ int main()
 	int i;
 	for (i = 0; i<3; i++)
 	{
-		ptrEmp[i]->salary();
+		totSal = totSal+(ptrEmp[i]->salary());
 	}
 	cout << "Total Salary for All Employees is: " << totSal << endl;
 
 	//testing destroying employees
-
 	cout << endl;
 	cout << "Firing " << ptrEmp[2]->name() << endl;
 	delete ptrEmp[2];
 	cout << "Employee count: " << Employee::numEmployees << endl;
-
 
 	return 0;
 }
